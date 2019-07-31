@@ -1,0 +1,159 @@
+/** GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Darker Grotesque', sans-serif;
+  background: #333;
+  position: relative;
+  height: 100vh;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.wrapper {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+}
+
+/** PLAYERS */
+
+.player-name {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 80px;
+  color: #333;
+  margin-bottom: 100px;
+}
+
+.active {
+  background-color: #f7f7f7;
+}
+
+.active .player-name {
+  font-weight: 600;
+}
+
+.active .player-name::after {
+  content: '\2022';
+  font-size: 8rem;
+  position: absolute;
+  color: red;
+  top: -4.7rem;
+  right: 10px;
+}
+
+.player-current-box {
+  background-color: #333;
+  color: rgb(132, 230, 67);
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #eee;
+}
+
+.player-current-score {
+  font-size: 1.8rem;
+}
+
+button {
+  position: absolute;
+  width: 12.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  font-weight: 500;
+}
+
+button:hover i {
+  margin-right: 1.2rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+i {
+  color: black;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.6rem;
+  line-height: 1;
+  vertical-align: text-top;
+  transition: margin 0.3s;
+}
+
+.btn-new {
+  top: 2.8rem;
+}
+
+.btn-roll {
+  top: 25rem;
+}
+
+.btn-hold {
+  top: 29rem;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  height: 6.25rem;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.3);
+}
+
+.winner {
+  background: gold;
+}
+
+.winned .player-name {
+  color: #ebebeb;
+}
